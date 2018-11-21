@@ -1,5 +1,3 @@
-//In the AdvsListContainer we invoke the action creator loadAdvs (and dispatch the result)
-
 import React from 'react' //change jsx to normal
 import { loadAdvs } from '../actions/advs'
 import { connect } from 'react-redux' // link with redux store
