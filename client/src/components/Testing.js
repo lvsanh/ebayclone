@@ -5,7 +5,7 @@ import Button from '@material-ui/core/Button';
 export default function Home(props) {
   return (
       <div>
-      <Button variant="contained" color="white"><Link to={`/advertisements/`}>Go to list of Advertisements</Link></Button>
+      <Button variant="contained" color="inherit"><Link to={`/advertisements/`}>Go to list of Advertisements</Link></Button>
       </div>
 
       )

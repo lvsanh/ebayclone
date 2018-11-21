@@ -5,6 +5,7 @@ import { Route } from 'react-router-dom'
 import AdvsListContainer from './components/AdvsListContainer';
 import Testing from './components/Testing';
 import AdvDetailsContainer from './components/AdvDetailsContainer';
+import AdminPageContainer from './components/AdminPageContainer';
 
 class App extends Component {
   render() {
@@ -14,6 +15,7 @@ class App extends Component {
           <Route path="/" exact component={Testing} />
           <Route path="/advertisements" exact component={AdvsListContainer} />
           <Route path="/advertisements/:id" component={AdvDetailsContainer} />
+          <Route path="/admin/" component={AdminPageContainer} />
         </div>
       </Provider>
     );
