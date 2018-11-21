@@ -1,4 +1,5 @@
-import { JsonController, Get, Param, NotFoundError, Put, Body, HttpCode, Post} from 'routing-controllers'
+import { JsonController, Get, Param, Body, HttpCode, Post} from 'routing-controllers'
+// import { NotFoundError, Put} from 'routing-controllers'
 import Advertisement from './entity'
 
 @JsonController()
@@ -17,15 +18,15 @@ export default class AdvController {
         return Advertisement.findOne(id)
     }
 
-    @Put('/advertisements/:id')
-    async updateAdv(
-        @Param('id') id: number,
-        @Body() update: Partial<Advertisement>
-    ) {
-        const adv = await Advertisement.findOne(id)
-        if (!adv) throw new NotFoundError('Cannot find advertisement')
-        return Advertisement.merge(adv, update).save()
-    }
+    // @Put('/advertisements/:id')
+    // async updateAdv(
+    //     @Param('id') id: number,
+    //     @Body() update: Partial<Advertisement>
+    // ) {
+    //     const adv = await Advertisement.findOne(id)
+    //     if (!adv) throw new NotFoundError('Cannot find advertisement')
+    //     return Advertisement.merge(adv, update).save()
+    // }
 
     @Post('/advertisements')
     @HttpCode(201)
