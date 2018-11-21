@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import store from './store'
-import {Provider} from 'react-redux'
+import { Provider } from 'react-redux'
 import { Route } from 'react-router-dom'
 import AdvsListContainer from './components/AdvsListContainer';
 import Testing from './components/Testing';
@@ -11,9 +11,9 @@ class App extends Component {
     return (
       <Provider store={store}>
         <div>
-        <Route path ="/" exact component = {Testing} />
-        <Route path="/advertisements" exact component={AdvsListContainer} />
-        <Route path="/advertisements/:id" component = {AdvDetailsContainer} /> 
+          <Route path="/" exact component={Testing} />
+          <Route path="/advertisements" exact component={AdvsListContainer} />
+          <Route path="/advertisements/:id" component={AdvDetailsContainer} />
         </div>
       </Provider>
     );
